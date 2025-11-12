@@ -130,3 +130,13 @@ tm_shape(tst) +
   tm_raster(col.scale = tm_scale_continuous())
 
 # Those are the basics of looking at ESMs! I'll be happy to answer any questions you may have :)
+
+
+# Using rcdo --------------------------------------------------------------
+
+cdo_yearmonmean(ifile = here("data", "output", "regridded", "tos_Omon_MPI-ESM1-2-LR_ssp370_r1i1p1f1_RegriddedMerged_20750101-21001231.nc"), ofile = here("data", "output", "temp.nc")) %>%
+  cdo_execute()
+
+# let's check what that is
+cdo_sinfo(here("data", "output", "temp.nc")) %>%
+  cdo_execute()
