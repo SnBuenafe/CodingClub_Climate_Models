@@ -8,8 +8,9 @@ ifelse(!dir.exists(file.path("resources")), dir.create(file.path("resources")), 
 # Update zip with new bits and pieces and copy to docs folder
 utils::zip(zipfile = "resources/ClimateModel_CodingClub.zip",
            files = c(
+             "README.md",
              "data/raw/",
              "docs",
              "Practical_ClimateModel_Wrangling.R",
-             "CodingClub_Climate_Models.Rproj",
+             "CodingClub_Climate_Models.Rproj"
            ))
