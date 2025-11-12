@@ -50,3 +50,5 @@ rsconnect/
 
 # Large files
 data/raw/raw_esm/*
+data/output/*
+resources
